@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8762 # 查找配置的访问地址
+      fail-fast: true  # 设置客户端优先判断Config Server是否访问正常
+## 通过spring.application.name 与 spring.profiles.active 的值拼接起来作为查找的目标配置文件
